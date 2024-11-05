@@ -31,10 +31,10 @@
      </br> [темных изображений с номерами классов в размеченных пикселях](https://drive.google.com/drive/folders/1C8rMD6RQOG1r7TJLSQQvFhSgHibhp3Vb?usp=drive_link)
 
 3. **Аугментирование датасета**
-   Увеличение количества изображений и их масок с помощью augmentation.py.
-    </br> [Результат для изображений](https://drive.google.com/drive/folders/1aNRBj7TLM2FG7MXN9qo_-NICZTTlKGN8?usp=drive_link)
-    </br> [Результат для масок в цвете](https://drive.google.com/drive/folders/1vDr0QoJf49OeU_lV7bn60181vEjsVKcQ?usp=drive_link)
-    </br> [Результат для темных масок с номерами классов в размеченных пикселях](https://drive.google.com/drive/folders/1bEIbwkaR8Rg5ucYsw2YWYQV3zCi-uQkl?usp=drive_link)
+   Увеличение с помощью augmentation.py количества:
+    </br> [изображений](https://drive.google.com/drive/folders/1aNRBj7TLM2FG7MXN9qo_-NICZTTlKGN8?usp=drive_link)
+    </br> [изображений масок в цвете](https://drive.google.com/drive/folders/1vDr0QoJf49OeU_lV7bn60181vEjsVKcQ?usp=drive_link)
+    </br> [изображений масок с номерами классов в размеченных пикселях](https://drive.google.com/drive/folders/1bEIbwkaR8Rg5ucYsw2YWYQV3zCi-uQkl?usp=drive_link)
    
 5. **Выбор моделей**  
    - Были рассмотрены решения для распознавания дефектов на стали, среди которых наиболее распространенной является модель U-Net (2015). U-Net состоит из энкодера, понижающего разрешение изображения для извлечения признаков, и декодера, восстанавливающего его через деконволюцию. Прямые связи между уровнями энкодера и декодера позволяют объединять пространственную информацию из разных слоев, что снижает потерю данных при понижении разрешения и улучшает точность сегментации. Модель оптимальна для использования на ресурсах со средними требованиями по памяти, и ее скорость обучения относительно высока за счет упрощенной структуры.
