@@ -26,7 +26,7 @@
 
 2. **Аннотирование данных**  
    - Разметка дефектов с использованием [Labelbox](https://labelbox.com/).
-   - Получение изображений масок с классами с помощью getting_masks.py.
+   - Получение изображений масок с классами с помощью /data_annotation/getting_masks.py.
      </br> [Результат в цвете](https://drive.google.com/drive/folders/1b1IgN7FwGUz6cRwOK2O8hlv-MPjtIJZ4?usp=drive_link)
      </br> [Результат с категориальными значениями](https://drive.google.com/drive/folders/196maURwJPO2L6S42lFMLpLB-T6tcg3kG?usp=drive_link)
     - Разделение по классам каждой маски на несколько с помощью split_masks.py.
