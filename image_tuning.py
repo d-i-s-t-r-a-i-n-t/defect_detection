@@ -8,6 +8,10 @@ output_folder = './tuned_result'
 file_name = "23.jpg"  
 
 # улучшение контраста с CLAHE ( попробовать еще Gamma Correction)
+# основная идея CLAHE заключается в выполнении выравнивания гистограммы локально, в меньших областях изображения, а не глобально
+# CLAHE включает в себя два основных этапа:
+# повышение контрастности
+# ограничение контрастности - количество пикселей с очень высокой или очень низкой интенсивностью уменьшается
 def enhance_contrast(image):
     lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
     l, a, b = cv2.split(lab)
@@ -17,11 +21,11 @@ def enhance_contrast(image):
     enhanced_img = cv2.cvtColor(limg, cv2.COLOR_LAB2BGR)
     return enhanced_img
 
-# удаление шума (портит, где много шума, попробовать еще Bilateral Filter или Non-Local Means Denoising и с/без)
+# удаление шума (портит, где много шума, попробовать еще Bilateral Filter или Non-Local Means Denoising(используется среднее значение всех пикселей в изображении с учётом их сходства с целевым пикселем) и с/без)
 def remove_noise(image):
     return cv2.medianBlur(image, 5)
 
-# улучшение резкости (попробовать Unsharp Masking или High-Pass Filter)
+# улучшение резкости (попробовать Unsharp Masking(усиливает локальный контраст изображения на тех участках, где изначально присутствовали резкие изменения градаций цвета) или High-Pass Filter)
 def sharpen_image(image):
     kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]]) 
     return cv2.filter2D(image, -1, kernel)
